@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filipino Food Recipes</title>
+    <!-- Link to Google Font for Cute Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom background, fonts, and color styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fbe7b2; /* Light yellowish background */
+            color: #333;
+            padding-top: 20px;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Quicksand', sans-serif;
+            color: #ff5733;
+        }
+
+        .navbar {
+            background-color: #ff6f61; /* Coral red background for navbar */
+        }
+
+        .navbar a {
+            color: white !important;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+            background-color: #ffcc00;
+        }
+
+        .recipe-card {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 15px;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-card-body {
+            padding: 20px;
+        }
+
+        .recipe-card-body h3 {
+            color: #ff5733;
+        }
+
+        .recipe-card-body p {
+            color: #555;
+        }
+
+        .form-section {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff6f61;
+            color: white;
+        }
+
+        /* Table styling */
+        table {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table th,
+        table td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .btn-custom {
+            background-color: #ff5733;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #ffcc00;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="#">Filipino Recipes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#recipes">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#form">Submit Recipe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#table">Recipe Table</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="container text-center" id="recipes">
+        <h1>Welcome to Filipino Recipe Heaven!</h1>
+        <p>Discover the best Filipino dishes with step-by-step instructions. Enjoy cooking!</p>
+    </div>
+
+    <!-- Recipe Cards Section -->
+    <div class="container">
+        <div class="row">
+            <!-- Adobo Recipe Card -->
+            <div class="col-md-4">
+                <div class="recipe-card">
+                    <img src="https://i.pinimg.com/736x/45/bd/d2/45bdd20338fba0480945704e27146cd2.jpg" alt="Adobo">
+                    <div class="recipe-card-body">
+                        <h3>Adobo</h3>
+                        <p>A savory dish made with chicken or pork, soy sauce, vinegar, garlic, and bay leaves. A Filipino favorite!</p>
+                        <a href="adobo.html" class="btn btn-custom">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sinigang Recipe Card -->
+            <div class="col-md-4">
+                <div class="recipe-card">
+                    <img src="https://i.pinimg.com/736x/ff/f9/b7/fff9b75ce11347b89b08eae6802346c4.jpg" alt="Sinigang">
+                    <div class="recipe-card-body">
+                        <h3>Sinigang na Baboy</h3>
+                        <p>A sour and savory soup made with pork and vegetables, traditionally flavored with tamarind.</p>
+                        <a href="sinigang.html" class="btn btn-custom">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Lechon Kawali Recipe Card -->
+            <div class="col-md-4">
+                <div class="recipe-card">
+                    <img src="https://i.pinimg.com/736x/67/74/18/6774183129c019da05fbf42f0d064547.jpg" alt="Lechon Kawali">
+                    <div class="recipe-card-body">
+                        <h3>Lechon Kawali</h3>
+                        <p>Crispy fried pork belly served with a special dipping sauce. A crispy and savory delight!</p>
+                        <a href="lechon-kawali.html" class="btn btn-custom">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="container form-section" id="form">
+        <h2>Submit Your Recipe</h2>
+        <form action="submit_recipe.html">
+            <div class="form-group">
+                <label for="recipeName">Recipe Name</label>
+                <input type="text" class="form-control" id="recipeName" placeholder="Enter Recipe Name">
+            </div>
+            <div class="form-group">
+                <label for="ingredients">Ingredients</label>
+                <textarea class="form-control" id="ingredients" rows="3" placeholder="List the ingredients"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="instructions">Instructions</label>
+                <textarea class="form-control" id="instructions" rows="3" placeholder="Enter cooking instructions"></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom">Submit Recipe</button>
+        </form>
+    </div>
+
+    <!-- Recipe Table Section -->
+    <div class="container" id="table">
+        <h2>Filipino Recipe Table</h2>
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Cooking Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Adobo</td>
+                    <td>Main Dish</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Sinigang</td>
+                    <td>Soup</td>
+                    <td>1 hour</td>
+                </tr>
+                <tr>
+                    <td>Lechon Kawali</td>
+                    <td>Main Dish</td>
+                    <td>1 hour</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2025 Filipino Recipe Sharing Website | <a href="https://www.example.com" target="_blank" class="text-white">Source</a></p>
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
